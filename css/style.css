@@ -68,20 +68,15 @@ body {
 .navbar-links li {
   display: flex;
   align-items: center;
-  flex: 1;
   justify-content: center;
+  flex: 1;
   white-space: nowrap;
 }
 
-.navbar-links li:not(:last-child)::after {
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 1.3rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  margin: 0 0.9rem;
-  vertical-align: middle;
+.navbar-links li:not(:last-child) {
+  border-left: 1px solid rgba(255, 255, 255, 0.8);
 }
+
 
 .navbar-links a {
   text-decoration: none;
