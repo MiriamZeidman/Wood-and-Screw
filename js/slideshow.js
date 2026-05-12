@@ -49,7 +49,11 @@ function startSlideshow(container, total) {
     const imgs = container.querySelectorAll('img');
     imgs[current].classList.remove('active');
     current = (current + 1) % total;
-    imgs[current].classList.add('active');
+    const next = imgs[current];
+    next.style.animation = 'none';
+    next.offsetHeight; // force reflow to restart animation
+    next.style.animation = '';
+    next.classList.add('active');
   }, 4000);
 }
 
