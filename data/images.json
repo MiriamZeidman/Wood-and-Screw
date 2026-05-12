@@ -1,0 +1,27 @@
+{
+  "pergolas": [
+    "https://picsum.photos/seed/pergola1/1200/800",
+    "https://picsum.photos/seed/pergola2/1200/800",
+    "https://picsum.photos/seed/pergola3/1200/800"
+  ],
+  "decks": [
+    "https://picsum.photos/seed/deck1/1200/800",
+    "https://picsum.photos/seed/deck2/1200/800",
+    "https://picsum.photos/seed/deck3/1200/800"
+  ],
+  "fences": [
+    "https://picsum.photos/seed/fence1/1200/800",
+    "https://picsum.photos/seed/fence2/1200/800",
+    "https://picsum.photos/seed/fence3/1200/800"
+  ],
+  "winter": [
+    "https://picsum.photos/seed/winter1/1200/800",
+    "https://picsum.photos/seed/winter2/1200/800",
+    "https://picsum.photos/seed/winter3/1200/800"
+  ],
+  "special": [
+    "https://picsum.photos/seed/special1/1200/800",
+    "https://picsum.photos/seed/special2/1200/800",
+    "https://picsum.photos/seed/special3/1200/800"
+  ]
+}
