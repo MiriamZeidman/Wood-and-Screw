@@ -40,8 +40,8 @@ body {
 }
 
 .navbar-logo img {
-  height: 80px;
-  width: 80px;
+  height: 58px;
+  width: 58px;
   object-fit: cover;
   border-radius: 50%;
   background-color: #f5ede0;
@@ -240,17 +240,17 @@ footer {
 
 .panel-label {
   position: absolute;
-  bottom: 0;
+  bottom: 2.5rem;
   right: 0;
   left: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
   color: var(--color-white);
   font-size: 2.4rem;
   font-weight: 900;
+  font-family: 'Rubik', sans-serif;
   text-align: center;
-  padding: 3rem 1rem 1.5rem;
+  padding: 3rem 1rem 0;
   transition: background var(--transition);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7), 0 4px 24px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8), 2px 2px 0 rgba(0,0,0,0.5);
 }
 
 .panel:hover .panel-label {
