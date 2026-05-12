@@ -241,7 +241,7 @@ footer {
 
 .panel-label {
   position: absolute;
-  bottom: 5rem;
+  bottom: 2.5rem;
   right: 0;
   left: 0;
   color: var(--color-white);
@@ -250,12 +250,24 @@ footer {
   font-family: 'Secular One', sans-serif;
   text-align: center;
   padding: 3rem 1rem 0;
-  transition: background var(--transition);
   text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8), 2px 2px 0 rgba(0,0,0,0.5);
 }
 
-.panel:hover .panel-label {
-  background: linear-gradient(transparent, rgba(139, 94, 60, 0.75));
+
+.panel::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.45));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.panel-label {
+  z-index: 2;
 }
 
 .panel:not(:last-child) {
