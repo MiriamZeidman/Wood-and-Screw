@@ -43,8 +43,9 @@ body {
   height: 80px;
   width: 80px;
   object-fit: contain;
-  filter: brightness(0) invert(1) sepia(1) saturate(0.4) hue-rotate(5deg);
-  opacity: 0.9;
+  border-radius: 50%;
+  background-color: #f5ede0;
+  padding: 6px;
 }
 
 .navbar-links {
