@@ -17,7 +17,17 @@
       font-weight: 900;
       color: var(--color-primary);
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .category-desc {
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #4a3a2a;
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+      font-weight: 400;
     }
 
     .images-grid {
@@ -138,6 +148,7 @@
   <main class="page-content">
     <div class="category-page">
       <h1 id="category-title">גלריה</h1>
+      <p class="category-desc" id="category-desc"></p>
       <div class="images-grid" id="images-grid"></div>
     </div>
   </main>
@@ -177,11 +188,20 @@
       special:  'עבודות מיוחדות',
     };
 
+    const categoryDescriptions = {
+      pergolas: 'פרגולות עץ בהתאמה אישית — מפגש מושלם בין אסתטיקה ותפקודיות. אנו בונים פרגולות מעץ איכותי העמיד בתנאי מזג האוויר, שייתנו לחצרכם חזות מרהיבה ומקום נוח לישיבה לאורך שנים.',
+      decks:    'דקים מעץ איכותי שהופכים כל שטח חוץ למרחב מחיה נעים ומזמין. אנו מתאימים את הדק לצרכיכם ולאופי השטח, ומבצעים את העבודה בדיוק ובגימור מושלם.',
+      fences:   'גדרות ושערים מעץ שמשלבים בין יופי, פרטיות ובטיחות. כל פרויקט מעוצב בהתאמה אישית, עם תשומת לב לפרטים ולגימור איכותי שיחזיק לאורך שנים.',
+      winter:   'סגירות חורף שמאפשרות ליהנות מהמרפסת והחצר גם בעונות הקור. פתרונות סגירה חמים, יפים ועמידים — המותאמים לכל מבנה ומרחב.',
+      special:  'כל מה שאפשר לדמיין מעץ — מדפים, ריהוט מותאם אישית ופרויקטים ייחודיים. אם חלמתם על משהו מעץ, אנו נהפוך אותו למציאות.',
+    };
+
     const params = new URLSearchParams(window.location.search);
     const cat = params.get('cat') || 'pergolas';
     const title = categoryNames[cat] || 'גלריה';
 
     document.getElementById('category-title').textContent = title;
+    document.getElementById('category-desc').textContent = categoryDescriptions[cat] || '';
     document.title = `${title} | עץ ובורג`;
 
     let allImages = [];
