@@ -125,7 +125,7 @@ body {
 .page-content {
   margin-top: var(--navbar-height);
   min-height: calc(100vh - var(--navbar-height));
-  background-color: #faf6f0;
+  background-color: #ede6d8;
 }
 
 /* ===== CONTACT WIDGET ===== */
