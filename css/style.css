@@ -41,11 +41,9 @@ body {
 
 .navbar-logo img {
   height: 88px;
-  width: 88px;
-  object-fit: cover;
-  border-radius: 50%;
+  width: auto;
+  object-fit: contain;
   background-color: transparent;
-  mix-blend-mode: screen;
 }
 
 .navbar-links {
