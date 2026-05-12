@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="עץ ובורג — 6 שנות ניסיון בעבודות עץ איכותיות. פרגולות, דקים וגדרות בירושלים, המרכז והדרום.">
-  <title>אודות | עץ ובורג</title>
+  <title>קצת עלינו | עץ ובורג</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
+    .page-content { background-color: #faf6f0; }
+
     .about-section {
       max-width: 1000px;
       margin: 4rem auto;
@@ -52,9 +54,10 @@
 
     .stat {
       text-align: center;
-      background-color: var(--color-light-gray);
+      background-color: #fff;
       border-radius: var(--border-radius);
       padding: 1rem 1.5rem;
+      box-shadow: var(--shadow);
     }
 
     .stat-number {
@@ -79,33 +82,32 @@
 
     .values-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem 2.5rem;
     }
 
-    .value-card {
-      background-color: var(--color-white);
-      border-radius: var(--border-radius);
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: var(--shadow);
-      border-top: 3px solid var(--color-primary);
-      transition: transform var(--transition);
+    .value-item {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
     }
 
-    .value-card:hover {
-      transform: translateY(-4px);
+    .value-item svg {
+      width: 28px;
+      height: 28px;
+      color: #8B5E3C;
+      flex-shrink: 0;
+      stroke: #8B5E3C;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
-    .value-icon {
-      font-size: 2rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .value-card h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-secondary);
+    .value-item span {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--color-text);
     }
 
     .areas-section {
@@ -132,10 +134,6 @@
     @media (max-width: 768px) {
       .about-hero { flex-direction: column; }
       .about-hero img { width: 100%; height: 280px; }
-      .values-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 480px) {
       .values-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -145,7 +143,7 @@
 <nav class="navbar">
     <ul class="navbar-links navbar-links-right" id="navbar-links-right">
       <li><a href="index.html">דף הבית</a></li>
-      <li><a href="about.html">אודות</a></li>
+      <li><a href="about.html">קצת עלינו</a></li>
       <li><a href="gallery.html">גלריית עבודות</a></li>
       <li><a href="category.html?cat=pergolas">פרגולות</a></li>
       <li><a href="category.html?cat=decks">דקים</a></li>
@@ -200,30 +198,37 @@
       <div class="values-section">
         <h2>למה בוחרים בנו?</h2>
         <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon">🪵</div>
-            <h3>איכות חומרים</h3>
+
+          <div class="value-item">
+            <svg viewBox="0 0 24 24"><path d="M2 20h20M6 20V10l6-6 6 6v10M10 20v-6h4v6"/></svg>
+            <span>איכות חומרים</span>
           </div>
-          <div class="value-card">
-            <div class="value-icon">🎯</div>
-            <h3>עבודה מדויקת וקפדנית</h3>
+
+          <div class="value-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            <span>עבודה מדויקת וקפדנית</span>
           </div>
-          <div class="value-card">
-            <div class="value-icon">⏱️</div>
-            <h3>עמידה בלוחות זמנים</h3>
+
+          <div class="value-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>עמידה בלוחות זמנים</span>
           </div>
-          <div class="value-card">
-            <div class="value-icon">🤝</div>
-            <h3>מקצועיות ואדיבות</h3>
+
+          <div class="value-item">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span>מקצועיות ואדיבות</span>
           </div>
-          <div class="value-card">
-            <div class="value-icon">💰</div>
-            <h3>מחירים נוחים</h3>
+
+          <div class="value-item">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span>מחירים נוחים</span>
           </div>
-          <div class="value-card">
-            <div class="value-icon">✨</div>
-            <h3>השארת המקום נקי ומסודר</h3>
+
+          <div class="value-item">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>השארת המקום נקי ומסודר</span>
           </div>
+
         </div>
       </div>
 
@@ -256,6 +261,7 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
