@@ -106,18 +106,26 @@
     }
 
     /* פרטי קשר */
+    .contact-info {
+      background-color: #2c1a0e;
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
     .contact-info h2 {
       font-size: 1.2rem;
       font-weight: 700;
-      color: var(--color-secondary);
-      margin-bottom: 1.5rem;
+      color: #e8c99a;
+      margin-bottom: 0;
     }
 
     .info-item {
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin-bottom: 1.2rem;
     }
 
     .info-icon {
@@ -131,7 +139,7 @@
     .info-icon svg {
       width: 22px;
       height: 22px;
-      stroke: var(--color-primary);
+      stroke: #e8c99a;
       fill: none;
       stroke-width: 1.8;
       stroke-linecap: round;
@@ -140,12 +148,12 @@
 
     .info-text {
       font-size: 1rem;
-      color: var(--color-text);
+      color: rgba(255,255,255,0.85);
       line-height: 1.5;
     }
 
     .info-text a {
-      color: var(--color-primary);
+      color: #e8c99a;
       text-decoration: none;
       font-weight: 600;
     }
@@ -159,7 +167,6 @@
       align-items: center;
       justify-content: center;
       gap: 0.6rem;
-      margin-top: 2rem;
       padding: 0.9rem 1.5rem;
       background-color: #25D366;
       color: white;
@@ -168,6 +175,7 @@
       font-weight: 700;
       font-size: 1rem;
       transition: background-color var(--transition), transform var(--transition);
+      margin-top: auto;
     }
 
     .whatsapp-btn:hover {
@@ -247,15 +255,6 @@
             </div>
             <div class="info-text">
               <a href="tel:+972522090411">052-2090411</a>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="info-text">
-              ראשון – חמישי<br>08:00 – 17:00
             </div>
           </div>
 
