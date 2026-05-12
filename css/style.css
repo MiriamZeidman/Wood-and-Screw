@@ -320,6 +320,9 @@ footer {
   }
 
   .panel {
+    flex: none;
     height: 40vh;
+    min-height: 220px;
+    width: 100%;
   }
 }
