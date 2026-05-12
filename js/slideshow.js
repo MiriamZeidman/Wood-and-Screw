@@ -1,8 +1,23 @@
-// טוען את נתוני התמונות ומפעיל את הסליידשו בדף הבית
-async function initSlideshows() {
-  const response = await fetch('data/images.json');
-  const images = await response.json();
+// נתוני התמונות — כאן תוחלפנה בכתובות Cloudinary אמיתיות
+const images = {
+  pergolas: [
+    'https://picsum.photos/seed/pergola1/1200/800',
+    'https://picsum.photos/seed/pergola2/1200/800',
+    'https://picsum.photos/seed/pergola3/1200/800',
+  ],
+  decks: [
+    'https://picsum.photos/seed/deck1/1200/800',
+    'https://picsum.photos/seed/deck2/1200/800',
+    'https://picsum.photos/seed/deck3/1200/800',
+  ],
+  fences: [
+    'https://picsum.photos/seed/fence1/1200/800',
+    'https://picsum.photos/seed/fence2/1200/800',
+    'https://picsum.photos/seed/fence3/1200/800',
+  ],
+};
 
+function initSlideshows() {
   const panels = [
     { id: 'slides-pergolas', category: 'pergolas' },
     { id: 'slides-decks',    category: 'decks'    },

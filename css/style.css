@@ -205,6 +205,7 @@ footer {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  background-color: #2D4A2D;
 }
 
 .panel-slides {
