@@ -25,16 +25,19 @@ function buildMobileMenu() {
 
 if (hamburger) {
   const menu = buildMobileMenu();
+  const widget = document.querySelector('.contact-widget');
 
   hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
+    const isOpen = hamburger.classList.toggle('open');
     menu.classList.toggle('open');
+    if (widget) widget.style.display = isOpen ? 'none' : '';
   });
 
   menu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('open');
       menu.classList.remove('open');
+      if (widget) widget.style.display = '';
     });
   });
 }
