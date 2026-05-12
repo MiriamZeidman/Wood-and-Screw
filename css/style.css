@@ -42,10 +42,8 @@ body {
 .navbar-logo img {
   height: 80px;
   width: 80px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 50%;
-  background-color: #f5ede0;
-  padding: 6px;
 }
 
 .navbar-links {
