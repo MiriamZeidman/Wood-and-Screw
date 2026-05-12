@@ -126,6 +126,7 @@ body {
   margin-top: var(--navbar-height);
   min-height: calc(100vh - var(--navbar-height));
   background-color: #ede6d8;
+  padding-top: 2rem;
 }
 
 /* ===== CONTACT WIDGET ===== */
