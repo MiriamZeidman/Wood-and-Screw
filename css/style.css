@@ -40,8 +40,8 @@ body {
 }
 
 .navbar-logo img {
-  height: 64px;
-  width: 64px;
+  height: 110px;
+  width: 110px;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -75,7 +75,7 @@ body {
 .navbar-links a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   font-weight: 500;
   transition: color var(--transition);
   white-space: nowrap;
@@ -203,11 +203,12 @@ footer {
   left: 0;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
   color: var(--color-white);
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 2.4rem;
+  font-weight: 900;
   text-align: center;
   padding: 3rem 1rem 1.5rem;
   transition: background var(--transition);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7), 0 4px 24px rgba(0, 0, 0, 0.5);
 }
 
 .panel:hover .panel-label {
