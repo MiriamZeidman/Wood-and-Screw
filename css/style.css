@@ -56,41 +56,35 @@ body {
 }
 
 .navbar-links-right {
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .navbar-links-left {
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .navbar-links li {
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   white-space: nowrap;
-  position: relative;
 }
 
-.navbar-links li:not(:last-child)::after {
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 1.2rem;
-  background-color: rgba(255, 255, 255, 0.75);
-  margin: 0;
-  vertical-align: middle;
+.navbar-links li:not(:last-child) {
+  border-left: 1px solid rgba(255, 255, 255, 0.75);
 }
 
 
 .navbar-links a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 300;
   font-family: 'Rubik', sans-serif;
   letter-spacing: 0.02em;
   transition: color var(--transition);
   white-space: nowrap;
-  padding: 0 0.9rem;
 }
 
 .navbar-links a:hover,
