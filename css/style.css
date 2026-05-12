@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Rubik:wght@300;400;500&display=swap');
 @import 'variables.css';
 
 * {
@@ -77,9 +77,10 @@ body {
 .navbar-links a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 500;
-  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 0.02em;
   transition: color var(--transition);
   white-space: nowrap;
 }
@@ -287,7 +288,7 @@ footer {
   color: rgba(255,255,255,0.9);
   text-decoration: none;
   font-size: 1.05rem;
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 500;
 }
 
