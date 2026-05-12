@@ -258,7 +258,7 @@ footer {
 }
 
 .panel:not(:last-child) {
-  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  border-left: 2px solid rgba(255, 255, 255, 0.85);
 }
 
 /* ===== MOBILE MENU ===== */
