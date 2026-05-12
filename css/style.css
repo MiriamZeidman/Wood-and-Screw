@@ -209,6 +209,10 @@ footer {
   background-color: #2D4A2D;
 }
 
+.panel:nth-child(2) {
+  flex: 1.8;
+}
+
 .panel-slides {
   position: absolute;
   inset: 0;
