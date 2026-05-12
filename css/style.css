@@ -128,17 +128,21 @@ body {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  width: 58px;
   height: 58px;
+  padding: 0 1.2rem 0 1rem;
   background-color: #25D366;
-  border-radius: 50%;
+  border-radius: 30px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
   box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
   z-index: 999;
   transition: transform var(--transition);
   text-decoration: none;
+  color: white;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .whatsapp-float:hover {
