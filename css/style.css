@@ -226,17 +226,17 @@ footer {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1.2s ease;
+  transition: opacity 1.8s ease;
 }
 
 .panel-slides img.active {
   opacity: 1;
-  animation: kenburns 4.5s ease-in-out forwards;
+  animation: pan-right-to-left 4.5s ease-in-out forwards;
 }
 
-@keyframes kenburns {
-  from { transform: scale(1) translate(0, 0); }
-  to   { transform: scale(1.1) translate(-2%, -1%); }
+@keyframes pan-right-to-left {
+  from { transform: scale(1.12) translateX(4%); }
+  to   { transform: scale(1.12) translateX(-4%); }
 }
 
 .panel-label {
