@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Rubik:wght@300;400;500&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Rubik:wght@300;400;500&family=Secular+One&family=Noto+Serif+Hebrew:wght@700;900&display=swap');
 @import 'variables.css';
 
 * {
@@ -241,16 +241,17 @@ footer {
 
 .panel-label {
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 22%;
   right: 0;
   left: 0;
   color: var(--color-white);
-  font-size: 2.4rem;
-  font-weight: 400;
-  font-family: 'Secular One', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  font-family: 'Noto Serif Hebrew', serif;
+  letter-spacing: 0.04em;
   text-align: center;
-  padding: 3rem 1rem 0;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8), 2px 2px 0 rgba(0,0,0,0.5);
+  padding: 0 1rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8);
 }
 
 
