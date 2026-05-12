@@ -56,18 +56,21 @@ body {
 }
 
 .navbar-links-right {
-  justify-content: space-evenly;
-  padding-left: 1rem;
+  justify-content: space-between;
+  padding-left: 0.5rem;
 }
 
 .navbar-links-left {
-  justify-content: space-evenly;
-  padding-right: 1rem;
+  justify-content: space-between;
+  padding-right: 0.5rem;
 }
 
 .navbar-links li {
   display: flex;
   align-items: center;
+  flex: 1;
+  justify-content: center;
+  white-space: nowrap;
 }
 
 .navbar-links li:not(:last-child)::after {
