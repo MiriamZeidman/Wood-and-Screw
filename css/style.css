@@ -41,7 +41,9 @@ body {
 
 .navbar-logo img {
   height: 64px;
-  object-fit: contain;
+  width: 64px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .navbar-links {
@@ -72,8 +74,8 @@ body {
 
 .navbar-links a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.82rem;
+  color: #ffffff;
+  font-size: 0.95rem;
   font-weight: 500;
   transition: color var(--transition);
   white-space: nowrap;
