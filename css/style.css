@@ -57,10 +57,12 @@ body {
 
 .navbar-links-right {
   justify-content: space-evenly;
+  padding-left: 1rem;
 }
 
 .navbar-links-left {
   justify-content: space-evenly;
+  padding-right: 1rem;
 }
 
 .navbar-links li {
@@ -69,9 +71,13 @@ body {
 }
 
 .navbar-links li:not(:last-child)::after {
-  content: '|';
-  color: rgba(255, 255, 255, 0.35);
-  margin: 0 0.4rem;
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 1.3rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0 0.9rem;
+  vertical-align: middle;
 }
 
 .navbar-links a {
