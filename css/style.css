@@ -246,12 +246,12 @@ footer {
   left: 0;
   color: var(--color-white);
   font-size: 3.2rem;
-  font-weight: 900;
-  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  font-family: 'Rubik', sans-serif;
   letter-spacing: 0.03em;
   text-align: center;
   padding: 0 1rem;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.95), 0 0 20px rgba(0,0,0,0.7);
+  text-shadow: 4px 4px 0 #000;
 }
 
 
