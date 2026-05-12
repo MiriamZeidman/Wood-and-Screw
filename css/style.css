@@ -143,12 +143,10 @@ body {
 .contact-widget-label {
   color: #e8c99a;
   font-family: var(--font-family);
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 700;
   text-align: center;
-  width: 32px;
-  word-break: break-all;
-  line-height: 1.4;
+  line-height: 1.5;
   margin-bottom: 0.2rem;
 }
 
