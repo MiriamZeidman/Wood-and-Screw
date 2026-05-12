@@ -26,7 +26,7 @@ body {
   right: 0;
   left: 0;
   height: var(--navbar-height);
-  background-color: #4a4a4a;
+  background-color: #2e2e2e;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -285,7 +285,7 @@ footer {
   top: var(--navbar-height);
   right: 0;
   left: 0;
-  background-color: #4a4a4a;
+  background-color: #2e2e2e;
   flex-direction: column;
   list-style: none;
   z-index: 998;
