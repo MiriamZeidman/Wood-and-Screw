@@ -247,11 +247,16 @@ footer {
   color: var(--color-white);
   font-size: 3.2rem;
   font-weight: 900;
-  font-family: 'Noto Serif Hebrew', serif;
-  letter-spacing: 0.04em;
+  font-family: 'Heebo', sans-serif;
+  letter-spacing: 0.03em;
   text-align: center;
   padding: 0 1rem;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8);
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     0px  3px 8px rgba(0,0,0,0.8);
 }
 
 
