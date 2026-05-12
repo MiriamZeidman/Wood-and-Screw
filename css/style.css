@@ -125,6 +125,7 @@ body {
 .page-content {
   margin-top: var(--navbar-height);
   min-height: calc(100vh - var(--navbar-height));
+  background-color: #faf6f0;
 }
 
 /* ===== CONTACT WIDGET ===== */
@@ -191,8 +192,8 @@ body {
 
 /* ===== FOOTER ===== */
 footer {
-  background-color: var(--color-secondary);
-  color: var(--color-white);
+  background-color: #2c1a0e;
+  color: rgba(255,255,255,0.75);
   text-align: center;
   padding: 1.8rem 2rem;
   font-size: 0.9rem;
