@@ -26,7 +26,7 @@ body {
   right: 0;
   left: 0;
   height: var(--navbar-height);
-  background-color: #3a2210;
+  background-color: #4a4a4a;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -79,7 +79,7 @@ body {
 .navbar-links a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 300;
   font-family: 'Rubik', sans-serif;
   letter-spacing: 0.02em;
@@ -285,7 +285,7 @@ footer {
   top: var(--navbar-height);
   right: 0;
   left: 0;
-  background-color: #3a2210;
+  background-color: #4a4a4a;
   flex-direction: column;
   list-style: none;
   z-index: 998;
