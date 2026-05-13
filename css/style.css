@@ -40,12 +40,35 @@ body {
   padding: 0 1.2rem;
 }
 
-.navbar-logo img {
-  height: 46px;
-  width: 46px;
-  object-fit: cover;
-  border-radius: 50%;
-  background-color: #f5ede0;
+.navbar-logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  border: 1.5px solid rgba(255,255,255,0.7);
+  padding: 0.3rem 1rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.logo-text-main {
+  display: block;
+  font-family: 'Secular One', sans-serif;
+  font-size: 1.15rem;
+  color: #fff;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.logo-text-sub {
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.12em;
+  white-space: nowrap;
 }
 
 .navbar-links {
