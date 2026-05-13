@@ -36,30 +36,28 @@
       background-color: #ede6d8;
     }
 
-    .about-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
+    .about-text {
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
     }
 
     .about-text p {
       font-size: 1rem;
       line-height: 1.95;
       color: #444;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
 
     .about-stats {
       display: flex;
-      gap: 2.5rem;
-      margin-top: 2rem;
+      justify-content: center;
+      gap: 4rem;
+      margin-bottom: 3rem;
       flex-wrap: wrap;
     }
 
-    .stat {
-      text-align: center;
-    }
+    .stat { text-align: center; }
 
     .stat-number {
       font-size: 2.4rem;
@@ -76,33 +74,33 @@
 
     .about-values {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem 2rem;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     .value-item {
       display: flex;
-      align-items: flex-start;
-      gap: 0.8rem;
+      align-items: center;
+      gap: 0.7rem;
     }
 
     .value-item svg {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
       stroke: var(--color-primary);
       fill: none;
       stroke-width: 1.8;
       stroke-linecap: round;
       stroke-linejoin: round;
       flex-shrink: 0;
-      margin-top: 2px;
     }
 
     .value-item span {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 500;
       color: var(--color-text);
-      line-height: 1.4;
     }
 
     /* ===== CATEGORIES ===== */
@@ -356,50 +354,48 @@
   <section class="home-about">
     <div class="home-section">
       <h2 class="section-title">קצת עלינו</h2>
-      <div class="about-inner">
-        <div class="about-text">
-          <p><strong>עץ ובורג</strong> היא חברה המתמחה בביצוע עבודות עץ לחוץ — פרגולות, דקים, גדרות ושערים, סגירות חורף ועבודות מיוחדות — עם דגש על גימור ברמה גבוהה.</p>
-          <p>אנו מתכננים ומבצעים כל פרויקט בהתאמה אישית, תוך ירידה לפרטים הקטנים ביותר — החל מבחירת החומרים, דרך החיבורים והאיטום ועד למסירה נקייה ומדויקת.</p>
-          <div class="about-stats">
-            <div class="stat">
-              <div class="stat-number">6</div>
-              <div class="stat-label">שנות ניסיון</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">100+</div>
-              <div class="stat-label">פרויקטים מוצלחים</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">3</div>
-              <div class="stat-label">אזורי פעילות</div>
-            </div>
-          </div>
+      <div class="about-text">
+        <p><strong>עץ ובורג</strong> היא חברה המתמחה בביצוע עבודות עץ לחוץ — פרגולות, דקים, גדרות ושערים, סגירות חורף ועבודות מיוחדות — עם דגש על גימור ברמה גבוהה.</p>
+        <p>אנו מתכננים ומבצעים כל פרויקט בהתאמה אישית, תוך ירידה לפרטים הקטנים ביותר — החל מבחירת החומרים, דרך החיבורים והאיטום ועד למסירה נקייה ומדויקת.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-number">6</div>
+          <div class="stat-label">שנות ניסיון</div>
         </div>
-        <div class="about-values">
-          <div class="value-item">
-            <svg viewBox="0 0 24 24"><path d="M2 20h20M6 20V10l6-6 6 6v10M10 20v-6h4v6"/></svg>
-            <span>איכות חומרים</span>
-          </div>
-          <div class="value-item">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>עמידה בלוחות זמנים</span>
-          </div>
-          <div class="value-item">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-            <span>עבודה מדויקת וקפדנית</span>
-          </div>
-          <div class="value-item">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>השארת המקום נקי ומסודר</span>
-          </div>
-          <div class="value-item">
-            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            <span>מחירים נוחים</span>
-          </div>
-          <div class="value-item">
-            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            <span>מקצועיות ואדיבות</span>
-          </div>
+        <div class="stat">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">פרויקטים מוצלחים</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">3</div>
+          <div class="stat-label">אזורי פעילות</div>
+        </div>
+      </div>
+      <div class="about-values">
+        <div class="value-item">
+          <svg viewBox="0 0 24 24"><path d="M2 20h20M6 20V10l6-6 6 6v10M10 20v-6h4v6"/></svg>
+          <span>איכות חומרים</span>
+        </div>
+        <div class="value-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>עמידה בלוחות זמנים</span>
+        </div>
+        <div class="value-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          <span>עבודה מדויקת וקפדנית</span>
+        </div>
+        <div class="value-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>השארת המקום נקי ומסודר</span>
+        </div>
+        <div class="value-item">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span>מחירים נוחים</span>
+        </div>
+        <div class="value-item">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span>מקצועיות ואדיבות</span>
         </div>
       </div>
     </div>
