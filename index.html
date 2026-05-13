@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -6,90 +6,521 @@
   <meta name="description" content="עץ ובורג — פרגולות, דקים וגדרות בהתאמה אישית. 6 שנות ניסיון באזור ירושלים, המרכז והדרום.">
   <title>עץ ובורג — פרגולות, דקים וגדרות</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== SECTIONS ===== */
+    .home-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--color-primary);
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 2px;
+      background-color: #b08060;
+      margin: 0.9rem auto 2.5rem;
+    }
+
+    /* ===== ABOUT ===== */
+    .home-about {
+      background-color: #ede6d8;
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-size: 1rem;
+      line-height: 1.95;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--color-primary);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: #6b5a47;
+      margin-top: 0.4rem;
+    }
+
+    .about-values {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .value-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+
+    .value-item svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--color-primary);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .value-item span {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text);
+      line-height: 1.4;
+    }
+
+    /* ===== CATEGORIES ===== */
+    .home-categories {
+      background-color: #f5f0e8;
+    }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+
+    .category-card {
+      position: relative;
+      height: 260px;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .category-card:nth-child(4),
+    .category-card:nth-child(5) {
+      grid-column: span 1;
+    }
+
+    .categories-grid .category-card:nth-child(4) {
+      grid-column: 1 / 2;
+    }
+
+    .categories-grid .category-card:nth-child(5) {
+      grid-column: 2 / 3;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.2);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .category-card-label {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.65));
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 2.5rem 1rem 1.2rem;
+    }
+
+    /* ===== REVIEWS ===== */
+    .home-reviews {
+      background-color: #ede6d8;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .review-card {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 1.8rem;
+      box-shadow: var(--shadow);
+    }
+
+    .review-stars {
+      color: #e8a020;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      letter-spacing: 2px;
+    }
+
+    .review-text {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    .review-author {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .reviews-link {
+      text-align: center;
+    }
+
+    .reviews-link a {
+      color: var(--color-primary);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border-bottom: 1px solid #b08060;
+      padding-bottom: 2px;
+    }
+
+    .reviews-link a:hover {
+      color: #7a5234;
+    }
+
+    /* ===== CONTACT ===== */
+    .home-contact {
+      background-color: #f5f0e8;
+    }
+
+    .contact-form {
+      background-color: var(--color-white);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      color: var(--color-text);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius);
+      font-family: var(--font-family);
+      font-size: 1rem;
+      direction: rtl;
+      transition: border-color var(--transition);
+      background-color: var(--color-background);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+    }
+
+    .form-group textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 0.9rem;
+      background-color: var(--color-primary);
+      color: white;
+      border: none;
+      border-radius: var(--border-radius);
+      font-family: var(--font-family);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color var(--transition), transform var(--transition);
+    }
+
+    .submit-btn:hover {
+      background-color: #7a5234;
+      transform: translateY(-2px);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .about-values { grid-template-columns: 1fr; }
+      .categories-grid { grid-template-columns: repeat(2, 1fr); }
+      .categories-grid .category-card:nth-child(4),
+      .categories-grid .category-card:nth-child(5) { grid-column: auto; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .home-panels { flex-direction: column; height: auto; }
+      .panel { flex: none; height: 40vh; min-height: 220px; width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      .categories-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- תפריט ניווט -->
 <nav class="navbar">
-    <ul class="navbar-links navbar-links-right" id="navbar-links-right">
-      <li><a href="index.html">דף הבית</a></li>
-      <li><a href="about.html">קצת עלינו</a></li>
-      <li><a href="category.html?cat=pergolas">פרגולות</a></li>
-      <li><a href="category.html?cat=decks">דקים</a></li>
-      <li><a href="category.html?cat=fences">גדרות ושערים</a></li>
-    </ul>
-    <div class="navbar-logo">
-      <a href="index.html"><img src="assets/logo.png" alt="עץ ובורג לוגו"></a>
+  <ul class="navbar-links navbar-links-right" id="navbar-links-right">
+    <li><a href="index.html">דף הבית</a></li>
+    <li><a href="about.html">קצת עלינו</a></li>
+    <li><a href="category.html?cat=pergolas">פרגולות</a></li>
+    <li><a href="category.html?cat=decks">דקים</a></li>
+    <li><a href="category.html?cat=fences">גדרות ושערים</a></li>
+  </ul>
+  <div class="navbar-logo">
+    <a href="index.html"><img src="assets/logo.png" alt="עץ ובורג לוגו"></a>
+  </div>
+  <ul class="navbar-links navbar-links-left" id="navbar-links-left">
+    <li><a href="category.html?cat=winter">סגירות חורף</a></li>
+    <li><a href="category.html?cat=special">עבודות מיוחדות</a></li>
+    <li><a href="reviews.html">המלצות</a></li>
+    <li><a href="contact.html">צור קשר</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="פתח תפריט">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main class="page-content" style="padding-top: 0;">
+
+  <!-- ===== פאנלים ===== -->
+  <div class="home-panels">
+    <div class="panel" onclick="location.href='category.html?cat=pergolas'" role="button" aria-label="לגלריית פרגולות">
+      <div class="panel-slides" id="slides-pergolas"></div>
+      <div class="panel-label">פרגולות</div>
     </div>
-    <ul class="navbar-links navbar-links-left" id="navbar-links-left">
-      <li><a href="category.html?cat=winter">סגירות חורף</a></li>
-      <li><a href="category.html?cat=special">עבודות מיוחדות</a></li>
-      <li><a href="reviews.html">המלצות</a></li>
-      <li><a href="contact.html">צור קשר</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="פתח תפריט">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- 3 פאנלים עם סליידשו -->
-  <main class="page-content">
-    <div class="home-panels">
-
-      <div class="panel" onclick="location.href='category.html?cat=pergolas'" role="button" aria-label="לגלריית פרגולות">
-        <div class="panel-slides" id="slides-pergolas"></div>
-        <div class="panel-label">פרגולות</div>
-      </div>
-
-      <div class="panel" onclick="location.href='category.html?cat=decks'" role="button" aria-label="לגלריית דקים">
-        <div class="panel-slides" id="slides-decks"></div>
-        <div class="panel-label">דקים</div>
-      </div>
-
-      <div class="panel" onclick="location.href='category.html?cat=fences'" role="button" aria-label="לגלריית גדרות ושערים">
-        <div class="panel-slides" id="slides-fences"></div>
-        <div class="panel-label">גדרות ושערים</div>
-      </div>
-
+    <div class="panel" onclick="location.href='category.html?cat=decks'" role="button" aria-label="לגלריית דקים">
+      <div class="panel-slides" id="slides-decks"></div>
+      <div class="panel-label">דקים</div>
     </div>
-  </main>
-
-  <!-- ווידג'ט יצירת קשר צף -->
-  <div class="contact-widget">
-    <span class="contact-widget-label">דברו<br>איתנו</span>
-    <a href="tel:+972522090411" class="contact-btn contact-btn-phone" aria-label="התקשר אלינו">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-      </svg>
-    </a>
-    <a href="https://wa.me/972522090411?text=שלום נתנאל, הגעתי אליך דרך האתר ואשמח לשמוע פרטים נוספים" class="contact-btn contact-btn-whatsapp" target="_blank" rel="noopener" aria-label="וואטסאפ">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-      </svg>
-    </a>
+    <div class="panel" onclick="location.href='category.html?cat=fences'" role="button" aria-label="לגלריית גדרות ושערים">
+      <div class="panel-slides" id="slides-fences"></div>
+      <div class="panel-label">גדרות ושערים</div>
+    </div>
   </div>
 
-  <footer>
-    <p>עץ ובורג &copy; 2025 | פרגולות, דקים וגדרות בהתאמה אישית | ירושלים, המרכז והדרום</p>
-  </footer>
+  <!-- ===== קצת עלינו ===== -->
+  <section class="home-about">
+    <div class="home-section">
+      <h2 class="section-title">קצת עלינו</h2>
+      <div class="about-inner">
+        <div class="about-text">
+          <p><strong>עץ ובורג</strong> היא חברה המתמחה בביצוע עבודות עץ לחוץ — פרגולות, דקים, גדרות ושערים, סגירות חורף ועבודות מיוחדות — עם דגש על גימור ברמה גבוהה.</p>
+          <p>אנו מתכננים ומבצעים כל פרויקט בהתאמה אישית, תוך ירידה לפרטים הקטנים ביותר — החל מבחירת החומרים, דרך החיבורים והאיטום ועד למסירה נקייה ומדויקת.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-number">6</div>
+              <div class="stat-label">שנות ניסיון</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">100+</div>
+              <div class="stat-label">פרויקטים מוצלחים</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">3</div>
+              <div class="stat-label">אזורי פעילות</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-values">
+          <div class="value-item">
+            <svg viewBox="0 0 24 24"><path d="M2 20h20M6 20V10l6-6 6 6v10M10 20v-6h4v6"/></svg>
+            <span>איכות חומרים</span>
+          </div>
+          <div class="value-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>עמידה בלוחות זמנים</span>
+          </div>
+          <div class="value-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            <span>עבודה מדויקת וקפדנית</span>
+          </div>
+          <div class="value-item">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>השארת המקום נקי ומסודר</span>
+          </div>
+          <div class="value-item">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span>מחירים נוחים</span>
+          </div>
+          <div class="value-item">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span>מקצועיות ואדיבות</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script src="js/main.js"></script>
-  <script src="js/slideshow.js"></script>
+  <!-- ===== קטגוריות ===== -->
+  <section class="home-categories">
+    <div class="home-section">
+      <h2 class="section-title">העבודות שלנו</h2>
+      <div class="categories-grid" id="categories-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== המלצות ===== -->
+  <section class="home-reviews">
+    <div class="home-section">
+      <h2 class="section-title">מה אומרים עלינו</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">עבודה מדהימה ומקצועית. הפרגולה יצאה בדיוק כמו שרצינו, והמחיר היה הוגן מאוד. ממליצים בחום!</p>
+          <div class="review-author">— דני, רעננה</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">שירות אדיב ומקצועי מהרגע הראשון. הדק יצא מושלם וסיימו בדיוק בזמן שהובטח. ממליצה לכולם.</p>
+          <div class="review-author">— רחל, ירושלים</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">בנו לנו גדר וגם שער כניסה. תוצאה מרשימה ביותר. השאירו את המקום נקי לגמרי אחרי העבודה.</p>
+          <div class="review-author">— יוסי, באר שבע</div>
+        </div>
+      </div>
+      <div class="reviews-link">
+        <a href="reviews.html">לכל ההמלצות ←</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== צור קשר ===== -->
+  <section class="home-contact">
+    <div class="home-section">
+      <h2 class="section-title">צור קשר</h2>
+      <div class="contact-form">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">שם מלא</label>
+            <input type="text" id="name" placeholder="ישראל ישראלי" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">טלפון</label>
+            <input type="tel" id="phone" placeholder="050-0000000" required>
+          </div>
+          <div class="form-group">
+            <label for="message">במה אפשר לעזור?</label>
+            <textarea id="message" placeholder="תארו בקצרה מה אתם מחפשים..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">שלחו לנו בוואטסאפ</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ווידג'ט יצירת קשר צף -->
+<div class="contact-widget">
+  <span class="contact-widget-label">דברו<br>איתנו</span>
+  <a href="tel:+972522090411" class="contact-btn contact-btn-phone" aria-label="התקשר אלינו">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+  </a>
+  <a href="https://wa.me/972522090411?text=שלום נתנאל, הגעתי אליך דרך האתר ואשמח לשמוע פרטים נוספים" class="contact-btn contact-btn-whatsapp" target="_blank" rel="noopener" aria-label="וואטסאפ">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<footer>
+  <p>עץ ובורג &copy; 2025 | פרגולות, דקים וגדרות בהתאמה אישית | ירושלים, המרכז והדרום</p>
+</footer>
+
+<script>
+  const categories = [
+    { key: 'pergolas', label: 'פרגולות' },
+    { key: 'decks',    label: 'דקים' },
+    { key: 'fences',   label: 'גדרות ושערים' },
+    { key: 'winter',   label: 'סגירות חורף' },
+    { key: 'special',  label: 'עבודות מיוחדות' },
+  ];
+
+  fetch('data/images.json')
+    .then(r => r.json())
+    .then(images => {
+      const grid = document.getElementById('categories-grid');
+      categories.forEach(({ key, label }) => {
+        const firstImage = images[key]?.[0] || '';
+        const card = document.createElement('div');
+        card.className = 'category-card';
+        card.onclick = () => location.href = `category.html?cat=${key}`;
+        card.innerHTML = `
+          <img src="${firstImage}" alt="${label}">
+          <div class="category-card-label">${label}</div>
+        `;
+        grid.appendChild(card);
+      });
+    });
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name    = document.getElementById('name').value.trim();
+    const phone   = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const text = `שלום, שמי ${name} ומספרי ${phone}.${message ? '%0Aמעוניין/ת ב: ' + message : ''}`;
+    window.open(`https://wa.me/972522090411?text=${text}`, '_blank');
+  });
+</script>
+<script src="js/main.js"></script>
+<script src="js/slideshow.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
