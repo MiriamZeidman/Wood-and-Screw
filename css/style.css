@@ -26,7 +26,7 @@ body {
   right: 0;
   left: 0;
   height: var(--navbar-height);
-  background-color: #3d3d3d;
+  background-color: #2e2620;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -37,37 +37,35 @@ body {
 
 .navbar-logo {
   flex-shrink: 0;
-  padding: 0 1.2rem;
+  padding: 0 1.5rem;
 }
 
 .navbar-logo a {
   text-decoration: none;
-  display: flex;
-  align-items: center;
 }
 
 .logo-text {
-  border: 1.5px solid rgba(255,255,255,0.7);
-  padding: 0.3rem 1rem;
+  border: 1.5px solid rgba(255,255,255,0.65);
+  padding: 0.28rem 1rem;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .logo-text-main {
   display: block;
   font-family: 'Secular One', sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #fff;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   white-space: nowrap;
 }
 
 .logo-text-sub {
   display: block;
   font-family: 'Rubik', sans-serif;
-  font-size: 0.6rem;
-  color: rgba(255,255,255,0.7);
-  letter-spacing: 0.12em;
+  font-size: 0.58rem;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.1em;
   white-space: nowrap;
 }
 
@@ -102,10 +100,10 @@ body {
 .navbar-links a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   font-weight: 300;
   font-family: 'Rubik', sans-serif;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   transition: color var(--transition);
   white-space: nowrap;
 }
@@ -216,7 +214,7 @@ body {
 
 /* ===== FOOTER ===== */
 footer {
-  background-color: #2c1a0e;
+  background-color: #2e2620;
   color: rgba(255,255,255,0.75);
   text-align: center;
   padding: 1.8rem 2rem;
@@ -234,7 +232,7 @@ footer {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  background-color: #2D4A2D;
+  background-color: #2e2620;
 }
 
 .panel:nth-child(2) {
@@ -309,7 +307,7 @@ footer {
   top: var(--navbar-height);
   right: 0;
   left: 0;
-  background-color: #3d3d3d;
+  background-color: #2e2620;
   flex-direction: column;
   list-style: none;
   z-index: 998;
