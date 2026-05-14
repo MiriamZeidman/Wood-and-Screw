@@ -26,7 +26,7 @@ body {
   right: 0;
   left: 0;
   height: var(--navbar-height);
-  background-color: #2e2620;
+  background-color: #3d3028;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -156,7 +156,7 @@ body {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  background-color: #2e2620;
+  background-color: #3d3028;
   border-radius: 28px 0 0 28px;
   padding: 1rem 0.65rem;
   display: flex;
@@ -199,7 +199,7 @@ body {
 .contact-btn-phone svg {
   width: 22px;
   height: 22px;
-  fill: #2e2620;
+  fill: #3d3028;
 }
 
 .contact-btn-whatsapp {
@@ -214,7 +214,7 @@ body {
 
 /* ===== FOOTER ===== */
 footer {
-  background-color: #2e2620;
+  background-color: #3d3028;
   color: rgba(255,255,255,0.75);
   text-align: center;
   padding: 1.8rem 2rem;
@@ -232,7 +232,7 @@ footer {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  background-color: #2e2620;
+  background-color: #3d3028;
 }
 
 .panel:nth-child(2) {
@@ -307,7 +307,7 @@ footer {
   top: var(--navbar-height);
   right: 0;
   left: 0;
-  background-color: #2e2620;
+  background-color: #3d3028;
   flex-direction: column;
   list-style: none;
   z-index: 998;
