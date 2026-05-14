@@ -46,43 +46,44 @@ body {
 }
 
 .logo-text {
-  position: relative;
   border: 1.5px solid #3d3028;
   padding: 0.6rem 1.6rem;
   text-align: center;
   line-height: 1.3;
   background-color: #ede6d8;
+  background-image:
+    linear-gradient(rgba(61,48,40,0.6), rgba(61,48,40,0.6)),
+    linear-gradient(rgba(61,48,40,0.6), rgba(61,48,40,0.6)),
+    linear-gradient(rgba(61,48,40,0.6), rgba(61,48,40,0.6)),
+    linear-gradient(rgba(61,48,40,0.6), rgba(61,48,40,0.6)),
+    linear-gradient(rgba(61,48,40,0.6), rgba(61,48,40,0.6)),
+    linear-gradient(rgba(61,48,40,0.6), rgba(61,48,40,0.6)),
+    linear-gradient(rgba(61,48,40,0.6), rgba(61,48,40,0.6)),
+    linear-gradient(rgba(61,48,40,0.6), rgba(61,48,40,0.6));
+  background-size:
+    calc(100% - 22px) 1px,
+    calc(100% - 22px) 1px,
+    1px calc(100% - 22px),
+    1px calc(100% - 22px),
+    8px 8px,
+    8px 8px,
+    8px 8px,
+    8px 8px;
+  background-position:
+    11px 7px,
+    11px calc(100% - 7px),
+    7px 11px,
+    calc(100% - 8px) 11px,
+    3px 3px,
+    calc(100% - 11px) 3px,
+    3px calc(100% - 11px),
+    calc(100% - 11px) calc(100% - 11px);
+  background-repeat: no-repeat;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-/* מסגרת פנימית */
-.logo-text::before {
-  content: '';
-  position: absolute;
-  inset: 5px;
-  border: 1px solid rgba(61,48,40,0.5);
-  pointer-events: none;
-}
-
-/* ריבועי פינה על פינות המסגרת הפנימית */
-.logo-text::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(#3d3028, #3d3028),
-    linear-gradient(#3d3028, #3d3028),
-    linear-gradient(#3d3028, #3d3028),
-    linear-gradient(#3d3028, #3d3028);
-  background-size: 6px 6px;
-  background-position:
-    2px 2px,
-    calc(100% - 8px) 2px,
-    2px calc(100% - 8px),
-    calc(100% - 8px) calc(100% - 8px);
-  background-repeat: no-repeat;
-  pointer-events: none;
-}
+.logo-text::before,
+.logo-text::after { content: none; }
 
 .logo-text-main {
   display: block;
